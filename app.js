@@ -44,9 +44,8 @@ const PRODUCTS = [
     price: 0, img: 'images/tycho-cut.webp', colors: [
       { name: 'RAW INDIGO', gallery: ['images/tycho-cut.webp'] },
       { name: 'BLACK', gallery: ['images/tycho-black.webp'] },
-      { name: 'OLIVE', gallery: ['images/tycho-olive.webp'] },
-      { name: 'BURGUNDY', gallery: ['images/tycho-burgundy.webp'] },
-      { name: 'GREY', gallery: ['images/tycho-grey.webp'] }
+      { name: 'GREY', gallery: ['images/tycho-grey.webp'] },
+      { name: 'DARK BROWN GREY', gallery: ['images/tycho-brown.webp'] }
     ], isNew: true,
     desc: "Weite Hose mit hohem Bund und V-förmiger Passe. Geschwungene Teilungsnähte mit Kontrastnähten laufen über die Beine, grosse Cargo-Taschen schliessen mit Schnallenriemen.",
     sketch: "images/sketch-tycho.jpg" }
