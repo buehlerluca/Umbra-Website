@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UMBRA — Garments from the dark side</title>
+<meta name="description" content="UMBRA is a concept fashion label. Explore the SYZYGY 2026 collection: sculpted denim, outerwear and accessories from the dark side.">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="UMBRA — Garments from the dark side">
+<meta property="og:description" content="Concept fashion label. SYZYGY 2026.">
+<meta property="og:image" content="images/umbra-moon.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="images/umbra-moon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#shop">Skip to products</a>
+<noscript><p style="position:fixed;inset:auto 0 0 0;z-index:999;background:#C48D41;color:#000;padding:12px;text-align:center;font:12px monospace">THIS SITE NEEDS JAVASCRIPT TO SHOW THE COLLECTION.</p></noscript>
+
+<!-- SPACE BACKGROUND (whole site) -->
+<div class="space" aria-hidden="true">
+  <div class="nebula n1"></div>
+  <div class="nebula n2"></div>
+  <div class="nebula n3"></div>
+  <div class="space-stars" id="spaceStars"></div>
+  <img src="images/umbra-moon.png" alt="" class="space-moon" id="spaceMoon">
+</div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="intro" id="intro" aria-hidden="true"><div class="intro-in"><img src="images/umbra-moon.png" alt=""><span>UMBRA</span></div></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span id="cursorLabel"></span></div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <a href="#top" class="brand" data-cursor="UMBRA">
+    <img src="images/umbra-moon.png" alt="" class="brand-moon">
+    <span>UMBRA</span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#shop" class="navlink" data-text="SHOP NEW">SHOP NEW</a>
+    <a href="#collections" class="navlink" data-text="COLLECTIONS">COLLECTIONS</a>
+    <a href="design.html" class="navlink" data-text="DESIGNS">DESIGNS</a>
+    <a href="#archive" class="navlink" data-text="ARCHIVE">ARCHIVE</a>
+    <button class="navlink" id="openContact" data-text="CONTACT">CONTACT</button>
+  </nav>
+  <button class="cartbtn" id="openCart" data-cursor="CART" aria-label="Open cart">CART <b id="cartCount" aria-live="polite">0</b></button>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><i></i><i></i></button>
+</header>
+
+<div class="mobilemenu" id="mobileMenu">
+  <a href="#shop">SHOP NEW</a>
+  <a href="#collections">COLLECTIONS</a>
+  <a href="design.html">DESIGNS</a>
+  <a href="#archive">ARCHIVE</a>
+  <button id="openContactM">CONTACT</button>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-stars" id="stars"></div>
+    <figure class="hero-side left" id="heroL" aria-hidden="true"><img src="images/model-2.webp" alt=""></figure>
+    <figure class="hero-side right" id="heroR" aria-hidden="true"><img src="images/model-1.webp" alt=""></figure>
+    <div class="hero-moon-wrap" id="heroMoon">
+      <img src="images/umbra-moon.png" alt="Umbra moon" class="hero-moon">
+    </div>
+    <h1 class="hero-title" id="heroTitle" aria-label="UMBRA">
+      <span>U</span><span>M</span><span>B</span><span>R</span><span>A</span>
+    </h1>
+    <div class="hero-meta">
+      <p>COLLECTION 01<br>"SYZYGY" 2026</p>
+      <p class="hero-scroll">SCROLL <i></i></p>
+      <p>GARMENTS FROM<br>THE DARK SIDE</p>
+    </div>
+  </section>
+
+  <!-- MARQUEE TEXT -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>UMBRA</span><i></i><span>SYZYGY 2026</span><i></i><span>SHADOW WORK</span><i></i><span>NEW IN</span><i></i>
+      <span>UMBRA</span><i></i><span>SYZYGY 2026</span><i></i><span>SHADOW WORK</span><i></i><span>NEW IN</span><i></i>
+      <span>UMBRA</span><i></i><span>SYZYGY 2026</span><i></i><span>SHADOW WORK</span><i></i><span>NEW IN</span><i></i>
+    </div>
+  </div>
+
+  <!-- HORIZONTAL SCROLL STRIP -->
+  <section class="hstrip" id="hstrip" aria-label="Featured">
+    <div class="hstrip-sticky">
+      <div class="hstrip-label">FEATURED<br><b id="hstripNum">01</b></div>
+      <div class="hstrip-track" id="hstripTrack"></div>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section class="section" id="collections">
+    <div class="sec-head">
+      <h2 class="sec-title reveal">COLLECTIONS</h2>
+      <p class="sec-note reveal">SELECT A DROP</p>
+    </div>
+    <div class="coll-switch reveal" id="collSwitch" role="tablist"></div>
+  </section>
+
+  <!-- SHOP GRID -->
+  <section class="section" id="shop">
+    <div class="filters reveal" id="filters" role="tablist"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- ARCHIVE / BIG STATEMENT -->
+  <section class="statement" id="archive">
+    <canvas class="mesh" id="mesh" aria-hidden="true"></canvas>
+    <div class="statement-moon" id="stMoon"><img src="images/umbra-moon.png" alt=""></div>
+    <p class="statement-text reveal">
+      UMBRA IS THE DEEPEST PART OF A SHADOW.<br>
+      THE PLACE WHERE NO LIGHT REACHES.<br>
+      EVERY PIECE IS CUT FROM IT.
+    </p>
+    <p class="statement-small reveal">NEW PIECES ARRIVE IN THE DARK. CHECK BACK.</p>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-big" id="footerBig">UMBRA</div>
+  <div class="footer-row">
+    <div class="footer-col">
+      <h4>INDEX</h4>
+      <a href="#shop">SHOP NEW</a>
+      <a href="#collections">COLLECTIONS</a>
+      <a href="design.html">DESIGNS</a>
+      <a href="#archive">ARCHIVE</a>
+      <button id="openContactF">CONTACT</button>
+    </div>
+    <div class="footer-col">
+      <h4>INFORMATION</h4>
+      <button data-legal="terms">TERMS OF SERVICE</button>
+      <button data-legal="privacy">PRIVACY POLICY</button>
+      <button data-legal="shipping">SHIPPING</button>
+      <button data-legal="returns">RETURNS</button>
+    </div>
+    <div class="footer-col">
+      <h4>FOLLOW</h4>
+      <span class="soon">INSTAGRAM <i>SOON</i></span>
+      <span class="soon">PINTEREST <i>SOON</i></span>
+      <span class="soon">TIKTOK <i>SOON</i></span>
+    </div>
+    <div class="footer-col footer-logo">
+      <img src="images/umbra-moon.png" alt="Umbra">
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 UMBRA · CONCEPT PROJECT</span>
+    <span>DESIGN STUDY · NOT AN ACTIVE STORE</span>
+  </div>
+</footer>
+
+<!-- PRODUCT MODAL -->
+<div class="overlay" id="overlay"></div>
+<aside class="product" id="product" role="dialog" aria-modal="true" aria-label="Product details" aria-hidden="true">
+  <button class="close" data-close aria-label="Close">CLOSE ✕</button>
+  <div class="product-img" id="pImgWrap"><img id="pImg" alt=""><div class="thumbs" id="pThumbs"></div></div>
+  <div class="product-info">
+    <p class="product-coll" id="pColl"></p>
+    <p class="product-ref" id="pRef"></p>
+    <h3 class="product-name" id="pName"></h3>
+    <p class="product-price" id="pPrice"></p>
+    <div class="colors" id="pColors"></div>
+    <p class="product-desc" id="pDesc"></p>
+    <a class="more" id="pMore" href="design.html">FULL DESCRIPTION: MATERIAL, COLOURS, INSPIRATION →</a>
+    <div class="sizes" id="pSizes"></div>
+    <button class="btn" id="addBtn"><span>ADD TO CART</span></button>
+    <p class="product-note" id="pNote" role="status"></p>
+    <p class="product-concept">CONCEPT PIECE · NOT AVAILABLE FOR PURCHASE</p>
+  </div>
+</aside>
+
+<!-- CART DRAWER -->
+<aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Cart" aria-hidden="true">
+  <div class="drawer-head"><h3>YOUR CART</h3><button data-close>CLOSE ✕</button></div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot">
+    <div class="total"><span>TOTAL</span><b id="cartTotal">—</b></div>
+    <button class="btn" id="checkoutBtn"><span>CHECKOUT</span></button>
+    <button class="linkbtn" id="clearCart">REMOVE ALL</button>
+  </div>
+</aside>
+
+<!-- CONTACT DRAWER -->
+<aside class="drawer" id="contactDrawer" role="dialog" aria-modal="true" aria-label="Contact" aria-hidden="true">
+  <div class="drawer-head"><h3>GET IN TOUCH</h3><button data-close>CLOSE ✕</button></div>
+  <form class="drawer-body form" id="contactForm">
+    <label>EMAIL<input type="email" name="email" autocomplete="email" placeholder="YOU@EMAIL.COM" required></label>
+    <label>MESSAGE<textarea name="message" rows="6" placeholder="YOUR MESSAGE" required></textarea></label>
+    <p class="form-note">PROTOTYPE FORM. MESSAGES ARE NOT SENT OR STORED.</p>
+    <button class="btn" type="submit"><span>SEND</span></button>
+  </form>
+</aside>
+
+<!-- INFORMATION DRAWER -->
+<aside class="drawer" id="legalDrawer" role="dialog" aria-modal="true" aria-label="Information" aria-hidden="true">
+  <div class="drawer-head"><h3 id="legalTitle">INFORMATION</h3><button data-close>CLOSE ✕</button></div>
+  <div class="drawer-body legal" id="legalBody"></div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
