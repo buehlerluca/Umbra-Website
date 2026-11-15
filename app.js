@@ -40,8 +40,14 @@ const PRODUCTS = [
     price: 0, oneSize: true, img: 'images/cap-cut.webp', isNew: true,
     desc: "Kappe mit sechs Segmenten, gebogenem Schirm, Ösen an den Seiten und verstellbarem Band mit Metallschnalle hinten. Moosartige Stickerei sitzt in Flecken auf Kopfteil und Schirm.",
     sketch: "images/sketch-cap.jpg" },
-  { id: 'tycho',  name: "PANTS IN RAW INDIGO", short: "PANTS INDIGO", category: 'PANTS', collection: 'syzygy',
-    price: 0, img: 'images/tycho-cut.webp', isNew: true,
+  { id: 'tycho',  name: "PANTS", short: "PANTS", category: 'PANTS', collection: 'syzygy',
+    price: 0, img: 'images/tycho-cut.webp', colors: [
+      { name: 'RAW INDIGO', gallery: ['images/tycho-cut.webp'] },
+      { name: 'BLACK', gallery: ['images/tycho-black.webp'] },
+      { name: 'OLIVE', gallery: ['images/tycho-olive.webp'] },
+      { name: 'BURGUNDY', gallery: ['images/tycho-burgundy.webp'] },
+      { name: 'GREY', gallery: ['images/tycho-grey.webp'] }
+    ], isNew: true,
     desc: "Weite Hose mit hohem Bund und V-förmiger Passe. Geschwungene Teilungsnähte mit Kontrastnähten laufen über die Beine, grosse Cargo-Taschen schliessen mit Schnallenriemen.",
     sketch: "images/sketch-tycho.jpg" }
 ];

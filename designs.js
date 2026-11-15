@@ -52,12 +52,12 @@ const DESIGNS = [
     inspiration: "Moos und Flechten auf altem Stein, auf Ruinen und auf verlassenen Gegenständen."
   },
   {
-    id: 'tycho', ref: 'UMB-06', name: 'PANTS IN RAW INDIGO', category: 'HOSEN',
-    images: ['images/tycho-cut.webp'],
+    id: 'tycho', ref: 'UMB-06', name: 'PANTS', category: 'HOSEN',
+    images: ['images/tycho-cut.webp','images/tycho-black.webp','images/tycho-olive.webp','images/tycho-burgundy.webp','images/tycho-grey.webp'],
     sketch: 'images/sketch-tycho.jpg',
     idea: "Arbeitshose mit einer anderen Linie. Statt gerader Teile verlaufen die Nähte geschwungen über die Beine und treffen sich am Bund in einem V. Die grossen Cargo-Taschen bleiben praktisch und geben dem weiten Bein Struktur.",
     material: "Steifer, roher Baumwoll-Denim in tiefem Indigo. Er ist nicht vorgewaschen und behält deshalb seine dunkle Farbe. Kontrastnähte in goldbraunem Garn, Knöpfe, Nieten und Schnallen an den Taschenriemen aus Metall.",
-    colours: "Rohes Indigo mit goldbraunen Nähten und silberfarbenem Metall.",
+    colours: "Fünf Farbvarianten: Rohes Indigo (die Hauptfarbe), Schwarz, Olive, Bordeaux und Grau. Die Kontrastnähte bleiben hell, das Metall silberfarben.",
     details: ["Hoher Bund mit V-förmiger Passe","Geschwungene Teilungsnähte mit Kontrastnähten","Grosse Cargo-Taschen mit Schnallenriemen und Knopfverschluss","Weites Bein"],
     inspiration: "Klassische Cargo- und Arbeitshosen. Die Nähte folgen der Form des Beins und lassen die weite Passform skulpturaler wirken."
   }
